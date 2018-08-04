@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "exampledb",
+    "database": "hushdb",
     "host": "localhost",
     "dialect": "mysql"
   },
