@@ -5,6 +5,7 @@
 body{
   margin: 0;
   background-color: rgb(51, 47, 47);
+  height: 1000px;
 }
 
 h1{
@@ -21,6 +22,18 @@ h1{
   margin-right:20px;
 }
 
+h3{
+  font-family: 'Lobster Two', cursive;
+  font-size: 30px;
+  margin-right:30px;
+  color:white;
+  width:50%;
+  height:50px;
+  margin: 0px auto 0px auto;
+  text-align: center;
+  font-weight: 100;
+}
+
 td{
   font-family: 'Lobster Two', cursive;
   font-size: 30px;
@@ -30,12 +43,14 @@ td{
 
 td:hover{
   cursor: pointer;
+  text-shadow: 5px 5px 5px rgb(255, 0, 128);
 }
 
 table{
   width: 40%;
   margin-right:auto;
   margin-left:auto;
+  
 }
 
 #loginStyle{
@@ -51,7 +66,7 @@ table{
 }
 
 #loginStyle:hover{
-  text-shadow: 5px 5px 5px rgb(51, 47, 47);;
+  text-shadow: 5px 5px 5px rgb(51, 47, 47);
   cursor: pointer;
 }
 
@@ -115,3 +130,38 @@ form{
   cursor: pointer;
 }
 
+#postBox{
+  background-color: rgba(0, 0, 0, 0.301);
+  width:75%;
+  height:700px;
+  margin:20px auto 0 auto;
+  color:white;
+  border:3px solid rgb(255, 0, 128);
+}
+
+#viewPost{
+  text-decoration: none;
+  font-weight: 100;
+  color:white;
+}
+
+#textBox{
+  width:100%;
+  height:100px;
+  border: 2px solid rgb(255, 0, 128);
+  font-size: 24px;
+  font-family: 'Lobster Two', cursive;
+  padding: 10px;
+}
+
+#ProfileName{
+  float:right;
+  font-family: 'Lobster Two', cursive;
+  font-size: 25px;
+  color:white;
+  margin-right:45px;
+  background:none;
+  border:none;
+  text-decoration: none;
+  font-weight: 100;
+}
