@@ -53,7 +53,7 @@ table{
   
 }
 
-#loginStyle{
+.loginStyle{
   float:right;
   font-family: 'Lobster Two', cursive;
   font-size: 25px;
@@ -65,12 +65,12 @@ table{
   font-weight: 100;
 }
 
-#loginStyle:hover{
+.loginStyle:hover{
   text-shadow: 5px 5px 5px rgb(51, 47, 47);
   cursor: pointer;
 }
 
-#CreateId{
+.CreateId{
   float:right;
   font-family: 'Lobster Two', cursive;
   font-size: 25px;
@@ -82,7 +82,7 @@ table{
   font-weight: 100;
 }
 
-#CreateId:hover{
+.CreateId:hover{
   text-shadow: 5px 5px 5px rgb(51, 47, 47);;
   cursor: pointer;
 }
@@ -95,20 +95,20 @@ form{
   margin-left:auto;
 }
 
-#fontId{
+.fontId{
   font-size: 24px;
   color: white;
   font-family: 'Lobster Two', cursive;
   margin-bottom: 20px;
 }
 
-#inputId{
+.inputId{
   width: 90%;
   height: 20px;
   padding:10px;
 }
 
-#submitId{
+.submitId{
   width: 150px;
   height: 50px;
   border: none;
@@ -119,7 +119,7 @@ form{
   cursor: pointer;
 }
 
-#HomeId{
+.HomeId{
   width: 150px;
   height: 50px;
   border: none;
@@ -130,7 +130,7 @@ form{
   cursor: pointer;
 }
 
-#postBox{
+.postBox{
   background-color: rgba(0, 0, 0, 0.301);
   width:75%;
   height:700px;
@@ -139,13 +139,13 @@ form{
   border:3px solid rgb(255, 0, 128);
 }
 
-#viewPost{
+.viewPost{
   text-decoration: none;
   font-weight: 100;
   color:white;
 }
 
-#textBox{
+.textBox{
   width:100%;
   height:100px;
   border: 2px solid rgb(255, 0, 128);
@@ -154,7 +154,7 @@ form{
   padding: 10px;
 }
 
-#ProfileName{
+.ProfileName{
   float:right;
   font-family: 'Lobster Two', cursive;
   font-size: 25px;
