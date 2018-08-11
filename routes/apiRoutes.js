@@ -2,29 +2,7 @@ var db = require("../models");
 var passport = require("../config/passport");
 
 module.exports = function (app) {
-  // Get all examples
-  app.get("/api/examples", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
-  // Create a new example
-  app.post("/api/examples", function (req, res) {
-    db.Example.create(req.body).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function (req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
-
   //here's the login routes!
-
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
@@ -40,7 +18,7 @@ module.exports = function (app) {
       username: req.body.username,
       password: req.body.password
     }).then(function () {
-      res.redirect(307, "/api/login");
+      res.json("/");
     }).catch(function (err) {
       console.log(err);
       res.json(err);
@@ -69,5 +47,20 @@ module.exports = function (app) {
         // id: req.user.id
       });
     }
+  });
+
+  app.post("/api/postConfession", function (req, res) {
+    console.log(req.body.post && req.body.author);
+    db.posts.create({
+      post: req.body.post,
+      author: req.body.author
+    }).then(function () {
+      console.log(req.body);
+      // res.redirect("/");
+    }).catch(function (err) {
+      console.log(err);
+      res.json(err);
+      res.status(422).json(err.errors[0].message);
+    });
   });
 };
