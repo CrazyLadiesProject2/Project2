@@ -26,7 +26,6 @@ module.exports = function (app) {
   //here's the login routes!
 
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    console.log("api route for profile");
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
@@ -37,7 +36,6 @@ module.exports = function (app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function (req, res) {
-    console.log(req.body);
     db.user.create({
       username: req.body.username,
       password: req.body.password
@@ -67,6 +65,7 @@ module.exports = function (app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         username: req.user.username,
+        password: req.user.password
         // id: req.user.id
       });
     }

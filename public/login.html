@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
-    <script src="js/index.js"></script>
-    <script src- "js/login.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
@@ -19,19 +17,20 @@
         <a class = "CreateId" href = "index.html">Home Page</a>
         <a class = "CreateId" href = "create.html">Create Account</a>
     </h1>
-    <form>
+    <form class="login">
         <div class = "fontId">
         Username:<br>
-        <input class = "inputId" type = "input" placeholder="Enter Username">
+        <input class = "inputId" id="username-input" type = "input" placeholder="Enter Username">
         <br><br>
         Password:<br>
-        <input class = "inputId" type = "input" placeholder="Enter Password">
+        <input class = "inputId" id="password-input" type = "input" placeholder="Enter Password">
         <br><br>
         <input class = "submitId" type = "submit" Value = "Login">
 
         </div>
     </form>
-
+    <script type="text/javascript" src="js/login.js"></script>
+    
 </body>
 
 </html>

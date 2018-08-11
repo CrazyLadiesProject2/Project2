@@ -7,7 +7,7 @@ $(document).ready(function () {
   var passwordInput = $("input#password-input");
   // When the signup button is clicked, we validate the username and password are not blank
   signUpForm.on("submit", function (event) {
-    console.log("submit success!");
+    console.log("user has been created!");
     event.preventDefault();
     var userData = {
       username: usernameInput.val().trim(),
