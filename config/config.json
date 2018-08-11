@@ -9,7 +9,7 @@
   "test": {
     "username": "root",
     "password": "root",
-    "database": "testdb",
+    "database": "hushdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
