@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log("we're in the login.js file");
   // Getting references to our form and inputs
   var loginForm = $("form.login");
   var usernameInput = $("input#username-input");
@@ -24,6 +25,7 @@ $(document).ready(function () {
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(username, password) {
+    console.log("going to api/login route");
     $.post("/api/login", {
       username: username,
       password: password
