@@ -1,0 +1,23 @@
+form {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.textBox {
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+}
+
+.paraBox {
+  -webkit-transform: translateZ(40px);
+  -moz-transform: translateZ(40px);
+}
+
+.paraBase {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/*# sourceMappingURL=style.css.map */
