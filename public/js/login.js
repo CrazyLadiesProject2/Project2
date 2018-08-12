@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  console.log("we're in the login.js file");
   // Getting references to our form and inputs
   var loginForm = $("form.login");
   var usernameInput = $("input#username-input");
