@@ -6,13 +6,15 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
+    db.posts.findAll({}).then(function (data) {
+      var hbsObject = {
+        posts: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
     });
   });
+
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function (req, res) {
