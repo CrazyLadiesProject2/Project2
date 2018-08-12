@@ -34,6 +34,10 @@ module.exports = function (app) {
   app.get("/login", function (req, res) {
     res.render("login");
   });
+  //here's the create (sign up) page
+  app.get("/create", function (req, res) {
+    res.render("create");
+  });
 
 
   //uncommenting this makes the login not work!
