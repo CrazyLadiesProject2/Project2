@@ -27,8 +27,14 @@ module.exports = function (app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/profile", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/profile.html"));
+    res.render("profile");
   });
+
+  //here's the login page
+  app.get("/login", function (req, res) {
+    res.render("login");
+  });
+
 
   //uncommenting this makes the login not work!
 //   // Render 404 page for any unmatched routes
