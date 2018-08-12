@@ -1,6 +1,7 @@
 //once user logs in successfully, it will request their user date from the DB users table
-var author;
+
 $(document).ready(function () {
+  var author;
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   $.get("/api/user_data").then(function (data) {
@@ -27,6 +28,7 @@ $(document).ready(function () {
     } else {
       postConfession(postData.post, postData.postAuthor);
     }
+ 
   });
 
 
