@@ -6,14 +6,18 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    db.posts.findAll({}).then(function (data) {
+    db.posts.findAll({}).then(function(data) {
+      // console.log(data);
+      var allPosts = JSON.parse(JSON.stringify(data));
       var hbsObject = {
-        posts: data
+        posts: allPosts
       };
-      console.log(hbsObject);
       res.render("index", hbsObject);
+      // project will be an instance of Project and stores the content of the table entry
+      // with id 123. if such an entry is not defined you will get null
     });
   });
+    
 
 
   // Load example page and pass in an example by id
