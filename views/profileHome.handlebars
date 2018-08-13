@@ -1,16 +1,17 @@
 <h1>
     Hushhh...
-    <a class="CreateId" href="/create">Create Account</a>
-    <a class="loginStyle" href="/login">Login</a>
+    <div class = "ProfileName">Profile Name</div>
+    <a class = "CreateId" href = "/">Logout</a>
+    <a class="CreateId" href="/profile">Profile</a>
 </h1>
-<h3 class = "fadeInLeft">What's Your Secret?</h3>
+<h3>What's Your Secret?</h3>
 <div class = "boxLayer">
     <div class="postBox">
         <div class = "newPostBox">
             {{#each posts}}
                 <div class = "postStyle">{{this.post}}</div>
             {{/each}}
-        </div>
+        <div>
     </div>
 </div>
 
