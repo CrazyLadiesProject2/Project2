@@ -9,6 +9,8 @@ $(document).ready(function () {
     author = data.username;
     
   });
+  
+  
   //some text here to add a post
   var postForm = $("form.post");
   var postTextBox = $("textarea.textBox");

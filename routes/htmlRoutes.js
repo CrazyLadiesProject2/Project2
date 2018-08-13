@@ -1,6 +1,6 @@
 var db = require("../models");
-
-
+var allPosts;
+var hbsObject;
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
@@ -8,8 +8,8 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     db.posts.findAll({}).then(function(data) {
       // console.log(data);
-      var allPosts = JSON.parse(JSON.stringify(data));
-      var hbsObject = {
+      allPosts = JSON.parse(JSON.stringify(data));
+      hbsObject = {
         posts: allPosts
       };
       res.render("index", hbsObject);
@@ -33,7 +33,17 @@ module.exports = function (app) {
   app.get("/profile", isAuthenticated, function (req, res) {
     res.render("profile");
   });
-
+  app.get("/profileHome", function (req, res) {
+    db.posts.findAll({}).then(function(data) {
+      // console.log(data);
+       allPosts = JSON.parse(JSON.stringify(data));
+       hbsObject = {
+        posts: allPosts
+      };
+      res.render("profileHome", hbsObject);
+    });
+    
+  });
   //here's the login page
   app.get("/login", function (req, res) {
     res.render("login");
@@ -42,7 +52,6 @@ module.exports = function (app) {
   app.get("/create", function (req, res) {
     res.render("create");
   });
-
 
   //uncommenting this makes the login not work!
 //   // Render 404 page for any unmatched routes

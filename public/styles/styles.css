@@ -5,7 +5,8 @@
 body{
   margin: 0;
   background-color: rgb(51, 47, 47);
-  height: 1000px;
+  min-height: 1200px;
+  height: auto;
 }
 
 h1{
@@ -20,6 +21,8 @@ h1{
   font-family: 'Lobster Two', cursive;
   font-size: 50px;
   margin-right:20px;
+  box-shadow: 5px 5px 5px rgb(32, 31, 31);
+  background: linear-gradient(to bottom right, rgb(255, 0, 128),rgb(83, 1, 42));
 }
 
 h3{
@@ -32,7 +35,24 @@ h3{
   margin: 0px auto 0px auto;
   text-align: center;
   font-weight: 100;
+  animation: type 2s steps(60, end);
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+h3:nth-child(2){
+  animation:  type2 10s steps(60, end);
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
 
 td{
   font-family: 'Lobster Two', cursive;
@@ -117,6 +137,8 @@ form{
   font-family: 'Lobster Two', cursive;
   font-size: 24px;
   cursor: pointer;
+  box-shadow: 5px 5px 5px rgb(32, 31, 31);
+  background: linear-gradient(to bottom right, rgb(255, 0, 128),rgb(129, 2, 66));
 }
 
 .HomeId{
@@ -131,12 +153,52 @@ form{
 }
 
 .postBox{
-  background-color: rgba(0, 0, 0, 0.301);
-  width:75%;
-  height:700px;
+  background-color: rgba(39, 36, 36, 0.377);
+  width:100%;
+  height:auto;
+  min-height: 500px;
   margin:20px auto 0 auto;
   color:white;
-  border:3px solid rgb(255, 0, 128);
+  box-shadow: 5px 5px 5px rgb(32, 31, 31);
+  font-size: 24px;
+  font-family: 'Lobster Two', cursive;
+  color:white;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.postStyle{
+  background-color: rgba(0, 0, 0, 0.438);
+  margin: 20px;
+  float:left;
+  width: auto;
+  max-width:15%;
+  height:auto;
+  border: 1px solid rgb(255, 0, 128);
+  box-shadow: 4px 4px 8px rgb(32, 31, 31);
+  padding: 20px;
+}
+
+.postStyle:hover{
+  
+}
+
+
+.newPostBox{
+  margin: 20px;
+  padding: 20px;
+
+}
+
+.boxLayer{
+  background-image: url("Lipz\ \(3\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin:20px auto 75px auto;
+  height:auto; 
+  width: 100%; 
+ 
 }
 
 .viewPost{
@@ -146,12 +208,16 @@ form{
 }
 
 .textBox{
+  background-color: rgb(53, 49, 49);
   width:100%;
   height:100px;
   border: 2px solid rgb(255, 0, 128);
+  border-radius: 10px;
   font-size: 24px;
   font-family: 'Lobster Two', cursive;
   padding: 10px;
+  color:white;
+  box-shadow: 5px 5px 5px rgb(32, 31, 31);
 }
 
 .ProfileName{
@@ -164,4 +230,13 @@ form{
   border:none;
   text-decoration: none;
   font-weight: 100;
+}
+
+footer{
+  background-color: rgb(46, 43, 43);
+  width:100%;
+  height:50px;
+  position: fixed;
+  bottom: 0;
+  color:white;
 }
